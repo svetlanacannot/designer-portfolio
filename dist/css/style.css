@@ -189,7 +189,6 @@ body {
   flex-direction: row-reverse;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 30px;
   padding-bottom: 30px;
 }
 .intro__name {
@@ -452,6 +451,7 @@ body {
     display: block !important;
     position: static;
     height: auto;
+    padding: 0;
   }
 
   .lang__btn {
@@ -470,13 +470,16 @@ body {
 
   .nav {
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     border-bottom: 1px solid #828282;
+    padding: 25px 0;
   }
   .nav__link {
     font-size: 1.8rem;
     transition: color 0.1s linear;
+    margin: auto;
   }
 
   .intro__top {
