@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <script src="./js/navigation.js" defer></script>
+    <title>Денис Новик</title>
+</head>
+<body>
+    <div class="intro container" id="intro">
+        <div class="intro__top">
+            <header class="header">
+                <button class="burger" onclick="openPopupNav()">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+                <div id="popup-nav" style="display: none">
+                    <nav class="nav">
+                        <a href="#intro" class="nav__link current">Главная</a>
+                        <a href="#about" class="nav__link">Обо мне</a>
+                        <a href="#skills" class="nav__link">Навыки</a>
+                        <a href="#portfolio" class="nav__link">Портфолио</a>
+                        <a href="#contacts" class="nav__link">Контакты</a>
+                    </nav>
+                    <div class="popup-nav__column">
+                        <button class="popup-nav__close" onclick="closePopupNav()"></button>
+                        <div class="lang lang--mobile">
+                            <a class="lang__btn current" href="russian.html" lang="ru" hreflang="ru">Ru</a>
+                            <span>|</span>
+                            <a class="lang__btn" href="index.html" lang="en" hreflang="en">Eng</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="intro__info">
+                <h1 class="intro__name">Денис Новик</h1>
+                <div class="intro__txt">
+                    <div>UX | UI дизайнер</div>
+                    <div>24 года, Минск</div>
+                </div>
+                <div class="lang lang--desktop">
+                    <a class="lang__btn current" href="russian.html" lang="ru" hreflang="ru">Ru</a>
+                    <span>|</span>
+                    <a class="lang__btn" href="index.html" lang="en" hreflang="en">Eng</a>
+                </div>
+            </div>
+        </div>
+
+        <img src="./assets/img/intro-mobile.jpg" alt="" class="intro__img intro__img--mobile">
+        <img src="./assets/img/intro-desktop.jpg" alt="" class="intro__img intro__img--desktop">
+    </div>
+
+    <section class="section container section--grey about" id="about">
+        <h2 class="section__heading">Обо мне</h2>
+        <div class="about__txt">
+            <p>Привет, я Денис - UX/UI дизайнер из Минска. Я интересуюсь дизайном и всем, что с ним связано.</p>
+            <p>Я учусь на курсах "Дизайн веб и мобильных интерфейсов" в IT-Academy</p>
+            <p>Готов создавать великолепные проекты с прекрасными людьми.</p>
+        </div>
+    </section>
+
+    <section class="section container skills" id="skills">
+        <h2 class="section__heading">Навыки</h2>
+        <p class="skills__txt">Я работаю в таких программах как</p>
+        <div class="programs">
+            <div class="program">
+                <img src="./assets/img/programs/ps.png" alt="" class="program__img">
+                <div class="program__name">Adobe Photoshop</div>
+                <div class="stars">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-grey.svg" alt="">
+                </div>
+            </div>
+
+            <div class="program">
+                <img src="./assets/img/programs/ai.png" alt="" class="program__img">
+                <div class="program__name">Adobe Illustrator</div>
+                <div class="stars">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-grey.svg" alt="">
+                    <img src="./assets/img/programs/star-grey.svg" alt="">
+                </div>
+            </div>
+
+            <div class="program">
+                <img src="./assets/img/programs/ae.png" alt="" class="program__img">
+                <div class="program__name">Adobe <br> After Effects</div>
+                <div class="stars">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-grey.svg" alt="">
+                </div>
+            </div>
+
+            <div class="program">
+                <img src="./assets/img/programs/fig.png" alt="" class="program__img">
+                <div class="program__name">Figma</div>
+                <div class="stars">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-black.svg" alt="">
+                    <img src="./assets/img/programs/star-grey.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--grey container portfolio" id="portfolio">
+        <h2 class="section__heading">Портфолио</h2>
+        <div class="portfolio__item">
+            <img src="./assets/img/portfolio/fashion store.jpg" alt="" class="portfolio__img">
+            <a href="#" class="portfolio__link">Интернет-магазин одежды - Главная страница</a>
+        </div>
+        <div class="portfolio__item">
+            <img src="./assets/img/portfolio/reebok.jpg" alt="" class="portfolio__img">
+            <a href="#" class="portfolio__link">Магазин Reebok - Концепция</a>
+        </div>
+        <div class="portfolio__item">
+            <img src="./assets/img/portfolio/braun.jpg" alt="" class="portfolio__img">
+            <a href="#" class="portfolio__link">Лэндинг Braun - Концепция</a>
+        </div>
+    </section>
+    <section class="section container contacts" id="contacts">
+        <h2 class="section__heading">Контакты</h2>
+        <div class="contacts__txt">
+            <p>Хотите узнать больше или просто поговорить?</p>
+            <p>Я вам всегда рад!</p>
+        </div>
+        <a href="mailto:svetlanaizmalkin@gmail.com" class="contacts__message">Отправить сообщение</a>
+        <div class="socials">
+            <a href="#" class="socials__item"><img src="./assets/img/socials/linkedin.svg" alt=""></a>
+            <a href="#" class="socials__item"><img src="./assets/img/socials/instagram.svg" alt=""></a>
+            <a href="#" class="socials__item"><img src="./assets/img/socials/behance.svg" alt=""></a>
+            <a href="#" class="socials__item"><img src="./assets/img/socials/dribble.svg" alt=""></a>
+        </div>
+        <div class="contacts__links">
+            <p>Оцените меня на</p>
+            <p><a href="#">LinkedIn</a>, <a href="">Instagram</a>, <a href="">Behance</a>, <a href="">Dribble</a></p>
+        </div>
+    </section>
+</body>
+</html>
