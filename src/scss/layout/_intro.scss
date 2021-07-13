@@ -1,0 +1,33 @@
+.intro{
+    display: flex;
+    flex-direction: column;
+
+    &__top{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__name{
+        margin-bottom: .6em;
+    }
+
+    &__txt{
+        padding-bottom: 2em;
+    }
+
+    &__img{
+        min-width: 100%;
+        margin-bottom: 60px;
+        &--desktop{
+            display: none;
+        }
+    }
+}
+
+.lang--desktop{
+    display: none;
+}

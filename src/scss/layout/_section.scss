@@ -1,0 +1,15 @@
+@use "../abstracts/abstracts" as a;
+
+.section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+
+    &__heading{
+        margin-bottom: 60px;
+    }
+}
+
+.section--grey{
+    background-color: a.$lightgrey;
+}

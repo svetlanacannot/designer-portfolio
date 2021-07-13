@@ -1,0 +1,29 @@
+@use "../abstracts/abstracts" as a;
+
+.contacts{
+    &__txt{
+        margin: 0 auto 40px;
+        width: 300px;
+    }
+
+    &__message{
+        margin-bottom: 50px;
+    }
+
+    &__links{
+        color: a.$grey;
+        font-size: 1.6rem;
+        a{
+            text-decoration: none;
+            color: a.$grey;
+        }
+        
+    }
+}
+
+.socials{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}

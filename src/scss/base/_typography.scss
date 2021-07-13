@@ -1,0 +1,75 @@
+@use "../abstracts/abstracts" as a;
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Gilroy";
+    font-weight: 500;
+    color: a.$black;
+}
+
+.nav__link{
+    font-size: a.$nav-links;
+    text-decoration: none;
+    color: a.$grey;
+    font-weight: 600;
+    transition: color .05s linear;
+
+    &:hover, &:focus, &:active{
+        color: a.$black;
+        outline: none;
+        background: none;
+    }
+}
+
+.intro{
+    &__name{
+        font-size: a.$h1;
+        font-weight: 600;
+        width: 5ch;
+        line-height: 1.3;
+    }
+
+    &__txt{
+        font-size: a.$primary-txt;
+        line-height: 1.2;
+    }
+}
+
+.section__heading{
+    font-size: a.$section-heading;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.about__txt{
+    font-size: a.$primary-txt;
+}
+
+.skills__txt{
+    font-size: a.$primary-txt;
+}
+
+.program__name{
+    font-weight: 600;
+    font-size: a.$program-name;
+    color: a.$grey;
+    text-align: center;
+}
+
+.portfolio__link{
+    color: a.$black;
+    font-size: a.$primary-txt;
+
+    &:hover, &:focus, &:active{
+        font-weight: 600;
+        outline: none;
+    }
+}
+
+.contacts__txt{
+    font-size: a.$primary-txt;
+    text-align: center;
+}
