@@ -1,0 +1,227 @@
+@use "./abstracts" as a;
+
+@media (min-width: a.$tablets) {
+    .container{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .intro__img{
+        &--desktop{
+            display: block;
+        }
+
+        &--mobile{
+            display: none;
+        }
+    }
+
+    .about__txt{
+        p{
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .programs{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .program{
+        width: 45%;
+
+        &:last-child{
+            margin-bottom: 80px;
+        }
+    }
+
+    .contacts{
+        &__message{
+            display: inline;
+            padding: 12px 30px;
+        }
+        .socials{
+            margin-top: 50px;
+        }
+    }
+}
+
+@media(min-width: a.$laptops){
+    .container{
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    .section{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .burger{
+        display: none;
+    }
+
+    #popup-nav{
+        display: block !important;
+        position: static;
+        height: auto;
+        padding: 0;
+    }
+
+    .lang{
+        &__btn{
+            transition: color .1s linear;
+        }
+        &--mobile{
+            display: none;
+        }
+        &--desktop{
+            display: block;
+        }
+    }
+
+    .popup-nav__close{
+        display: none;
+    }
+
+    .nav{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid a.$grey;
+        padding: 25px 0;
+        &__link{
+            font-size: a.$primary-txt;
+            transition: color .1s linear;
+            margin: auto;
+        }
+    }
+
+    .intro{
+        &__top{
+            flex-direction: column;
+        }
+
+        &__info{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lang{
+            font-size: 1.6rem;
+            transform: rotate(-90deg) translateY(50%);
+            
+        }
+    }
+
+    .header{
+        width: 100%;
+    }
+
+    .skills__txt{
+        margin-bottom: 5em;
+    }
+
+    .programs{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .program{
+        max-width: 20%;
+        &__img{
+            width: 90px;
+            margin-bottom: 30px;
+        }
+        &:last-child{
+            .program__img{
+                width: 32%;
+            }
+        }
+    }
+
+    .stars{
+        img{
+            width: 13%;
+        }
+    }
+
+    .portfolio__item{
+        margin-bottom: 100px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    .contacts{
+        &__message{
+            display: inline;
+            padding: 12px 30px;
+        }
+
+        &__links{
+            a{
+                transition: color .1s linear;
+                &:hover, &:focus{
+                    outline: none;
+                    color: a.$black;
+                    text-decoration: underline;
+                }
+                &:active{
+                    font-weight: bold;
+                }
+            }
+            
+        }
+    }
+
+    .socials{
+        margin: 90px auto 45px;
+        width: 400px;
+        &__item{
+            transition: transform .1s linear;
+            &:hover, &:focus{
+                outline: none;
+                transform: translateY(-10px);
+            }
+        }
+    }
+}
+
+@media(min-width: a.$desctops){
+    .container{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
+
+@media(min-width: a.$large-screens){
+    .container{
+        padding-left: 250px;
+        padding-right: 250px;
+    }
+
+    .contacts__txt{
+        margin-bottom: 60px;
+    }
+
+    .socials{
+        padding-top: 45px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .program{
+        height: 250px;
+    }
+    .section{
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}

@@ -1,0 +1,112 @@
+@use "../abstracts/abstracts" as a;
+
+.lang{
+    font-size: a.$lang;
+    font-weight: 600;
+    transform: rotate(90deg) translatey(-100%);
+
+    &__btn{
+        padding: 0;
+        margin: 0;
+        background: none;
+        border: none;
+        color: a.$grey;
+        text-transform: uppercase;
+        transition: color .05s linear;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover, &:focus, &:active{
+            color: a.$black;
+            outline: none;
+        }
+    }
+
+    span{
+        color: a.$black;
+    }
+}
+
+.current-lang{
+    color: a.$black;
+}
+
+.popup-nav__close{
+    background: none;
+    padding: 0;
+    border: none;
+    width: 23px;
+    height: 23px;
+    background-image: url(../../src/assets/img/icons/cross-nav.svg);
+    transition: background-image .05s linear;
+
+    &:focus, &:active{
+        outline: none;
+        background-image: url(../../src/assets/img/icons/close-black.svg);
+    }
+}
+
+//BURGER MENU BTN
+
+.burger{
+    display: flex;
+    flex-direction: column;
+    background: none;
+    padding: 0;
+    border: none;
+
+    &__line{
+        width: 33px;
+        height: 4px;
+        background-color: a.$black;
+        margin-bottom: 4px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    &:focus, &:hover{
+        outline: none;
+
+        .burger__line{
+            background-color: a.$grey;
+        }
+    }
+
+    &:active{
+        .burger__line{
+            background-color: #000;
+        }
+    }
+}
+
+.current {
+    color: a.$black;
+}
+
+.contacts__message{
+    color: #fff;
+    background-color: a.$black;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 1000px;
+    font-size: a.$primary-txt;
+    text-decoration: none;
+    line-height: 1;
+
+    transition: background-color .1s linear, border .1s linear, color .1s linear;
+
+    &:hover, &:focus{
+        outline: none;
+        background-color: a.$grey;
+    }
+
+    &:active{
+        background-color: #fff;
+        color: a.$black;
+        border: 2px solid a.$black;
+    }
+}

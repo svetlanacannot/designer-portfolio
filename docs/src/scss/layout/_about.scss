@@ -1,0 +1,12 @@
+@use "../abstracts/abstracts" as a;
+
+.about__txt{
+    p{
+        margin-bottom: 1.5em;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    
+}
