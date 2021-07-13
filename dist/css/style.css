@@ -160,6 +160,7 @@ body {
   left: 0;
   background-color: #fff;
   padding: 30px 20px 60px;
+  overflow: hidden;
 }
 
 .popup-nav__column {

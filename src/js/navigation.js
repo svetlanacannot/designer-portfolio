@@ -1,6 +1,10 @@
 const popupNav = document.querySelector("#popup-nav")
 const links = Array.from(document.querySelectorAll(".nav__link"))
-let currentLink = null;
+let currentLink = null
+
+popupNav.addEventListener('touchmove', e => {
+    e.preventDefault()
+}, false);
 
 setCurrentLink()
 
