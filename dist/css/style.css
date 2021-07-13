@@ -190,6 +190,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   padding-bottom: 30px;
+  padding-top: 30px;
 }
 .intro__name {
   margin-bottom: 0.6em;
@@ -484,6 +485,7 @@ body {
 
   .intro__top {
     flex-direction: column;
+    padding-top: 0;
   }
   .intro__info {
     display: flex;
