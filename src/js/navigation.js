@@ -1,37 +1,24 @@
 const popupNav = document.querySelector("#popup-nav")
 const links = Array.from(document.querySelectorAll(".nav__link"))
-let currentLink = null
+const firstLink = document.querySelector(".nav__link")
+
+firstLink.style="color: #070707";
+
+links.forEach(link => {
+    link.addEventListener("mouseenter", ()=>{
+        link.style="color: #070707"
+        firstLink.style="color: #828282"
+    })
+    link.addEventListener("mouseout", ()=>{
+        link.style="color: #828282"
+        firstLink.style="color: #070707"
+    })
+})
 
 popupNav.addEventListener('touchmove', e => {
     e.preventDefault()
 }, false);
 
-setCurrentLink()
-
-
-links.forEach(link=>{
-    link.addEventListener("click", ()=>{
-        currentLink.className = "nav__link"
-        link.className = "nav__link current"
-        setCurrentLink()
-    })
-})
-
-function setCurrentLang(){
-    langs.forEach(lang=>{
-        if(lang.className=="lang__btn current"){
-            currentLang = lang
-        }
-    })
-}
-
-function setCurrentLink(){
-    links.forEach(link=>{
-        if(link.className=="nav__link current"){
-            currentLink = link
-        }
-    })
-}
 
 function openPopupNav(){
     popupNav.style = "display: flex"

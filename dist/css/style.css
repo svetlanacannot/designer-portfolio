@@ -95,7 +95,6 @@ body {
 .nav__link:hover, .nav__link:focus, .nav__link:active {
   color: #070707;
   outline: none;
-  background: none;
 }
 
 .intro__name {
