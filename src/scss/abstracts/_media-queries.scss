@@ -61,51 +61,15 @@
         padding-bottom: 80px;
     }
 
-    .burger{
-        display: none;
+    .header{
+        align-self: start;
     }
 
-    #popup-nav{
-        display: block !important;
-        position: static;
-        height: auto;
-        padding: 0;
-    }
-
-    .lang{
-        &__btn{
-            transition: color .1s linear;
-        }
-        &--mobile{
-            display: none;
-        }
-        &--desktop{
-            display: block;
-        }
-    }
-
-    .popup-nav__close{
-        display: none;
-    }
-
-    .nav{
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        border-bottom: 1px solid a.$grey;
-        padding: 25px 0;
-        &__link{
-            font-size: a.$primary-txt;
-            transition: color .1s linear;
-            margin: auto;
-        }
-    }
 
     .intro{
         &__top{
-            flex-direction: column;
-            padding-top: 0;
+            flex-direction: row-reverse;
+            align-items: center;
         }
 
         &__info{
@@ -113,6 +77,15 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            width: 100%;
+        }
+
+        &__txt{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
         }
 
         .lang{
@@ -123,11 +96,8 @@
 
         &__img{
             background: url(../../src/assets/img/intro-desktop.jpg) no-repeat top / cover;
+            margin-bottom: 40px;
         }
-    }
-
-    .header{
-        width: 100%;
     }
 
     .skills__txt{
@@ -200,6 +170,70 @@
     .container{
         padding-left: 200px;
         padding-right: 200px;
+    }
+    .burger{
+        display: none;
+    }
+
+    #popup-nav{
+        display: block !important;
+        position: static;
+        height: auto;
+        padding: 0;
+    }
+
+    .lang{
+        &__btn{
+            transition: color .1s linear;
+        }
+        &--mobile{
+            display: none;
+        }
+        &--desktop{
+            display: block;
+        }
+    }
+
+    .popup-nav__close{
+        display: none;
+    }
+
+    .nav{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid a.$grey;
+        padding: 25px 0;
+        &__link{
+            font-size: a.$primary-txt;
+            transition: color .1s linear;
+            margin: auto;
+        }
+    }
+
+    .header{
+        width: 100%;
+    }
+
+    .intro{
+        &__top{
+            padding: 0;
+        }
+
+        &__info{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        &__txt{
+            position: static;
+            transform: unset;
+        }
+    }
+
+    .popup-nav__column{
+        padding: 0;
     }
 }
 

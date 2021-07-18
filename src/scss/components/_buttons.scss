@@ -39,6 +39,7 @@
     height: 23px;
     background-image: url(../../src/assets/img/icons/cross-nav.svg);
     transition: background-image .05s linear;
+    cursor: pointer;
 
     &:focus, &:active{
         outline: none;
@@ -54,6 +55,7 @@
     background: none;
     padding: 0;
     border: none;
+    cursor: pointer;
 
     &__line{
         width: 33px;
