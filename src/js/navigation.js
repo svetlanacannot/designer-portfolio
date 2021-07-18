@@ -1,6 +1,7 @@
 const popupNav = document.querySelector("#popup-nav")
 const links = Array.from(document.querySelectorAll(".nav__link"))
 const firstLink = document.querySelector(".nav__link")
+const overlay = document.querySelector('.popup-overlay')
 
 firstLink.style="color: #070707";
 
@@ -21,14 +22,16 @@ popupNav.addEventListener('touchmove', e => {
 
 
 function openPopupNav(){
-    popupNav.style = "display: flex"
+    popupNav.style = "transform: translateX(-100%)"
+    overlay.style = "display: block"
     links.forEach(link => {
         link.addEventListener("click", closePopupNav)
     })
 }
 
 function closePopupNav() {
-    popupNav.style = "display: none"
+    popupNav.style = "transform: unset"
+    overlay.style = "display: none"
     links.forEach(link => {
         link.removeEventListener("click", closePopupNav)
     })

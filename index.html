@@ -17,7 +17,8 @@
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
                 </button>
-                <div id="popup-nav" style="display: none">
+                <div class="popup-overlay" onclick="closePopupNav()"></div>
+                <div id="popup-nav" style="transform: unset;">
                     <nav class="nav">
                         <a href="#intro" class="nav__link">Home</a>
                         <a href="#about" class="nav__link">About me</a>
@@ -26,7 +27,10 @@
                         <a href="#contacts" class="nav__link">Contacts</a>
                     </nav>
                     <div class="popup-nav__column">
-                        <button class="popup-nav__close" onclick="closePopupNav()"></button>
+                        <button class="popup-nav__close" onclick="closePopupNav()">
+                            <span class="close-line"></span>
+                            <span class="close-line"></span>
+                        </button>
                         <div class="lang lang--mobile">
                             <a class="lang__btn " href="russian.html" lang="ru" hreflang="ru">Ru</a>
                             <span>|</span>

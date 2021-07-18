@@ -37,14 +37,37 @@
     border: none;
     width: 23px;
     height: 23px;
-    background-image: url(../../src/assets/img/icons/cross-nav.svg);
-    transition: background-image .05s linear;
     cursor: pointer;
+    position: relative;
 
-    &:focus, &:active{
-        outline: none;
-        background-image: url(../../src/assets/img/icons/close-black.svg);
+    .close-line{
+        height: 3px;
+        width: 25px;
+        background-color: a.$grey;
+        display: block;
+        position: absolute;
+
+        &:first-of-type{
+            transform: translate(-50%, -50%) rotate(45deg);
+            left: 50%;
+            top: 50%;
+        }
+
+        &:last-of-type{
+            transform: translate(-50%, -50%) rotate(-45deg);
+            left: 50%;
+            top: 50%;
+        }
     }
+
+    &:hover, &:focus{
+        outline: none;
+        .close-line{
+            background-color: a.$black;
+        }
+    }
+
+    
 }
 
 //BURGER MENU BTN

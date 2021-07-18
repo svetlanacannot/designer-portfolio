@@ -156,11 +156,12 @@ body {
   width: 100%;
   height: 100vh;
   top: 0;
-  left: 0;
+  right: -100%;
   background-color: #fff;
   padding: 30px 20px 80px;
   z-index: 1000;
   overflow: hidden;
+  transition: transform 0.3s linear;
 }
 
 .popup-nav__column {
@@ -169,6 +170,17 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 30px;
+}
+
+.popup-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
 }
 
 .nav {
@@ -337,13 +349,31 @@ body {
   border: none;
   width: 23px;
   height: 23px;
-  background-image: url(../../src/assets/img/icons/cross-nav.svg);
-  transition: background-image 0.05s linear;
   cursor: pointer;
+  position: relative;
 }
-.popup-nav__close:focus, .popup-nav__close:active {
+.popup-nav__close .close-line {
+  height: 3px;
+  width: 25px;
+  background-color: #828282;
+  display: block;
+  position: absolute;
+}
+.popup-nav__close .close-line:first-of-type {
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: 50%;
+  top: 50%;
+}
+.popup-nav__close .close-line:last-of-type {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  left: 50%;
+  top: 50%;
+}
+.popup-nav__close:hover, .popup-nav__close:focus {
   outline: none;
-  background-image: url(../../src/assets/img/icons/close-black.svg);
+}
+.popup-nav__close:hover .close-line, .popup-nav__close:focus .close-line {
+  background-color: #070707;
 }
 
 .burger {
@@ -454,6 +484,11 @@ body {
 
   .header {
     align-self: start;
+  }
+
+  #popup-nav {
+    width: 250px;
+    right: -250px;
   }
 
   .intro__top {

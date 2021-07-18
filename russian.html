@@ -26,7 +26,9 @@
                         <a href="#contacts" class="nav__link">Контакты</a>
                     </nav>
                     <div class="popup-nav__column">
-                        <button class="popup-nav__close" onclick="closePopupNav()"></button>
+                        <button class="popup-nav__close" onclick="closePopupNav()">
+                            <span class="close-line"></span>
+                            <span class="close-line"></span></button>
                         <div class="lang lang--mobile">
                             <a class="lang__btn current" href="russian.html" lang="ru" hreflang="ru">Ru</a>
                             <span>|</span>
@@ -49,8 +51,7 @@
             </div>
         </div>
 
-        <img src="./src/assets/img/intro-mobile.jpg" alt="" class="intro__img intro__img--mobile">
-        <img src="./src/assets/img/intro-desktop.jpg" alt="" class="intro__img intro__img--desktop">
+        <div class="intro__img"></div>
     </div>
 
     <section class="section container section--grey about" id="about">
