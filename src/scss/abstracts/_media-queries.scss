@@ -1,5 +1,16 @@
 @use "./abstracts" as a;
 
+@media (max-width: a.$laptops) and (orientation: landscape){
+    .intro{
+        height: auto;
+
+        &__img{
+            min-height: 300px;
+            background-image: url(../../src/assets/img/intro-desktop.jpg);
+        }
+    }
+}
+
 @media (min-width: a.$tablets) {
     .container{
         padding-left: 40px;
