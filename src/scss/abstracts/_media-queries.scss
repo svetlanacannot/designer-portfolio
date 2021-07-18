@@ -27,11 +27,12 @@
     .programs{
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .program{
         width: 45%;
+        max-width: 200px;
 
         &:last-child{
             margin-bottom: 80px;
@@ -119,6 +120,10 @@
             transform: rotate(-90deg) translateY(50%);
             
         }
+
+        &__img{
+            background: url(../../src/assets/img/intro-desktop.jpg) no-repeat top / cover;
+        }
     }
 
     .header{
@@ -137,13 +142,9 @@
     .program{
         max-width: 20%;
         &__img{
-            width: 90px;
+            height: 90px;
             margin-bottom: 30px;
-        }
-        &:last-child{
-            .program__img{
-                width: 32%;
-            }
+            width: auto;
         }
     }
 
